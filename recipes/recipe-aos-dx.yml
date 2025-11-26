@@ -1,0 +1,38 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+# image will be published to ghcr.io/<user>/<name>
+name: a.os
+# description will be included in the image's metadata
+description: "A.OS"
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/ublue-os/aurora-dx
+image-version: latest # latest is also supported if you want new updates ASAP
+
+# module configuration, executed in order
+# you can include multiple instances of the same module
+modules:
+  - type: files
+    files:
+      - source: system
+        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+
+  - from-file: commoninstall.yml
+
+  - type: dnf
+
+
+  - type: default-flatpaks
+    configurations:
+
+
+  - type: os-release
+    properties:
+      ID: a.os_linux
+      ID_LIKE: fedora
+      NAME: a.os
+      PRETTY_NAME: a.OS
+      HOME_URL: "https://github.com/HenrickTheBull/a.os"
+      BUG_REPORT_URL: "https://github.com/HenrickTheBull/a.os/issues"
+
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully

@@ -1,0 +1,31 @@
+modules: 
+  - type: dnf
+    repos:
+      copr:
+        - atim/starship
+    install:
+      packages:
+        - micro
+        - starship
+        - btop
+    remove:
+      packages:
+        # example: removing firefox (in favor of the flatpak)
+        # "firefox" is the main package, "firefox-langpacks" is a dependency
+        - firefox
+        - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+        - htop
+        - tailscale
+
+  - type: default-flatpaks
+    configurations:
+      - notify: true # Send notification after install/uninstall is finished (true/false)
+        scope: system
+        # If no repo information is specified, Flathub will be used by default
+        install: # system flatpaks we want all users to have and not remove
+          - org.mozilla.firefox
+          - com.discordapp.Discord
+          - org.telegram.desktop
+        remove: 
+          - org.fkoehler.KTailctl
+      - scope: user # Also add Flathub user repo, but no user packages
