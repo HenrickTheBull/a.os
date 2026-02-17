@@ -49,8 +49,8 @@ modules:
       ID: a.os
       NAME: a.os
       PRETTY_NAME: a.OS
-      VERSION: 43
-      VERSION_ID: 43
+      VERSION: "43"
+      VERSION_ID: "43"
       ID_LIKE: fedora
       ANSI_COLOR: "0;38;2;255;165;0"
       HOME_URL: https://github.com/henrickthebull/a.os
