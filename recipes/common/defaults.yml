@@ -1,5 +1,3 @@
-# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
-
 modules:
   - type: files
     files:
@@ -23,7 +21,7 @@ modules:
 
   - type: default-flatpaks
     configurations:
-      - notify: true # Send notification after install/uninstall is finished (true/false)
+      - notify: flase # Send notification after install/uninstall is finished (true/false)
         scope: system
         # If no repo information is specified, Flathub will be used by default
         install: # system flatpaks we want all users to have and not remove
@@ -40,9 +38,13 @@ modules:
       PRETTY_NAME: a.OS
       VERSION: "43"
       VERSION_ID: "43"
+      VERSION_CODENAME: "Baton Rouge"
       ID_LIKE: fedora
       ANSI_COLOR: "0;38;2;255;165;0"
+      DEFAULT_HOSTNAME: aos
       HOME_URL: https://github.com/henrickthebull/a.os
       DOCUMENTATION_URL: https://github.com/henrickthebull/a.os
       BUG_REPORT_URL: https://github.com/henrickthebull/a.os/issues
       SUPPORT_URL: https://github.com/henrickthebull/a.os
+      VARIANT_ID: a.os
+      IMAGE_ID: a.os
