@@ -13,10 +13,8 @@ image-version: latest # latest is also supported if you want new updates ASAP
 # you can include multiple instances of the same module
 modules:
   - type: akmods
-    install:
-      nvidia-driver:
-      - nvidia-open
+    install: []
+    nvidia-driver: nvidia-open
   - from-file: recipe.yml
-
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
