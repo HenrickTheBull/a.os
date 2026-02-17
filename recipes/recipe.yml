@@ -12,50 +12,6 @@ image-version: latest # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - type: files
-    files:
-      - source: system
-        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
-
-  - type: dnf
-    repos:
-      copr:
-        - atim/starship
-    install:
-      packages:
-        - micro
-        - starship
-    remove:
-      packages:
-        # example: removing firefox (in favor of the flatpak)
-        # "firefox" is the main package, "firefox-langpacks" is a dependency
-        - firefox
-        - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
-
-  - type: default-flatpaks
-    configurations:
-      - notify: true # Send notification after install/uninstall is finished (true/false)
-        scope: system
-        # If no repo information is specified, Flathub will be used by default
-        install: # system flatpaks we want all users to have and not remove
-          - com.vivaldi.Vivaldi
-          - com.discordapp.Discord
-        remove:
-          - org.mozilla.firefox
-      - scope: user # Also add Flathub user repo, but no user packages
-    
-  - type: os-release
-    properties:
-      ID: a.os
-      NAME: a.os
-      PRETTY_NAME: a.OS
-      VERSION: "43"
-      VERSION_ID: "43"
-      ID_LIKE: fedora
-      ANSI_COLOR: "0;38;2;255;165;0"
-      HOME_URL: https://github.com/henrickthebull/a.os
-      DOCUMENTATION_URL: https://github.com/henrickthebull/a.os
-      BUG_REPORT_URL: https://github.com/henrickthebull/a.os/issues
-      SUPPORT_URL: https://github.com/henrickthebull/a.os
+  - from-file: common/defaults.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully

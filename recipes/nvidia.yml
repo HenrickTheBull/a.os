@@ -6,15 +6,12 @@ name: a.os-nvidia
 description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/aurora
+base-image: ghcr.io/ublue-os/aurora-nvidia
 image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - type: akmods
-    install: []
-    nvidia-driver: nvidia-open
-  - from-file: recipe.yml
+  - from-file: common/defaults.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
