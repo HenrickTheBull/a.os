@@ -48,3 +48,4 @@ modules:
       SUPPORT_URL: https://github.com/henrickthebull/a.os
       VARIANT_ID: a.os
       IMAGE_ID: a.os
+      VARIANT: "a.OS Plasma"

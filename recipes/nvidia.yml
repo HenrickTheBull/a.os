@@ -18,6 +18,8 @@ modules:
     properties:
       VARIANT_ID: a.os-nvidia
       IMAGE_ID: a.os-nvidia
+      VARIANT: "a.OS Plasma NVIDIA"
+
 
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
