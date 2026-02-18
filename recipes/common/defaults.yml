@@ -27,7 +27,6 @@ modules:
     repos:
       copr:
         - atim/starship
-          chroot: fedora-43-x86_64
     install:
       packages:
         - micro
