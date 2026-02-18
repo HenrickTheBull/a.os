@@ -4,6 +4,25 @@ modules:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
+  - type: os-release
+    properties:
+      ID: a.os
+      NAME: a.os
+      PRETTY_NAME: a.OS
+      VERSION: "43"
+      VERSION_ID: "43"
+      VERSION_CODENAME: "Baton Rouge"
+      ID_LIKE: fedora
+      ANSI_COLOR: "0;38;2;255;165;0"
+      DEFAULT_HOSTNAME: aos
+      HOME_URL: https://github.com/henrickthebull/a.os
+      DOCUMENTATION_URL: https://github.com/henrickthebull/a.os
+      BUG_REPORT_URL: https://github.com/henrickthebull/a.os/issues
+      SUPPORT_URL: https://github.com/henrickthebull/a.os
+      VARIANT_ID: a.os
+      IMAGE_ID: a.os
+      VARIANT: "a.OS Plasma"
+
   - type: dnf
     repos:
       copr:
@@ -31,22 +50,3 @@ modules:
         remove:
           - org.mozilla.firefox
       - scope: user # Also add Flathub user repo, but no user packages
-
-  - type: os-release
-    properties:
-      ID: a.os
-      NAME: a.os
-      PRETTY_NAME: a.OS
-      VERSION: "43"
-      VERSION_ID: "43"
-      VERSION_CODENAME: "Baton Rouge"
-      ID_LIKE: fedora
-      ANSI_COLOR: "0;38;2;255;165;0"
-      DEFAULT_HOSTNAME: aos
-      HOME_URL: https://github.com/henrickthebull/a.os
-      DOCUMENTATION_URL: https://github.com/henrickthebull/a.os
-      BUG_REPORT_URL: https://github.com/henrickthebull/a.os/issues
-      SUPPORT_URL: https://github.com/henrickthebull/a.os
-      VARIANT_ID: a.os
-      IMAGE_ID: a.os
-      VARIANT: "a.OS Plasma"
