@@ -36,8 +36,8 @@ modules:
       ID: a.os
       NAME: a.os
       PRETTY_NAME: a.OS
-      VERSION: "43"
-      VERSION_ID: "43"
+      VERSION: "44"
+      VERSION_ID: "44"
       VERSION_CODENAME: "Baton Rouge"
       ID_LIKE: fedora
       ANSI_COLOR: "0;38;2;255;165;0"
