@@ -27,6 +27,7 @@ modules:
 
   - type: dnf
     repos:
+      nonfree: rpmfusion
       copr:
         - name: atim/starship
           chroot: fedora-43-x86_64
@@ -34,6 +35,9 @@ modules:
       packages:
         - micro
         - starship
+        - steam
+        - gamescope
+        - mangohud
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
