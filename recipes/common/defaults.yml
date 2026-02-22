@@ -35,7 +35,6 @@ modules:
       packages:
         - micro
         - starship
-        - steam
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
