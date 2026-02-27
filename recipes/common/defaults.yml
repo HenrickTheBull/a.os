@@ -6,6 +6,10 @@ modules:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
+  - type: script
+    snippets:
+      - "rm -f /etc/bazaar/curated.yaml"
+
   - type: os-release
     properties:
       ID: a.os
