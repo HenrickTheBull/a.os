@@ -8,7 +8,7 @@ modules:
 
   - type: script
     scripts:
-      - cleanup-folder.sh
+      - cleanup-bazaar.sh
 
   - type: os-release
     properties:
