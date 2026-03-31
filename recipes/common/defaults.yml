@@ -29,6 +29,11 @@ modules:
       IMAGE_ID: a.os
       VARIANT: "a.OS Plasma"
 
+  - type: containerfile
+    snippets:
+      - RUN rm -f /etc/profile.d/ublue-fastfetch.sh /usr/libexec/ublue-fastfetch
+      - RUN sed -i 's/SHELL=\/bin\/bash/SHELL=\/usr\/bin\/zsh/g' /etc/default/useradd
+
   - type: dnf
     repos:
       copr:
