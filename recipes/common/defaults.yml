@@ -7,8 +7,8 @@ modules:
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
   - type: script
-    snippets:
-      - "rm -f /etc/bazaar/curated.yaml"
+    scripts:
+      - cleanup-folder.sh
 
   - type: os-release
     properties:
