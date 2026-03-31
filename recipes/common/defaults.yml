@@ -38,7 +38,8 @@ modules:
       packages:
         - micro
         - starship
-        - waypipe 
+        - waypipe
+        - zsh
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
