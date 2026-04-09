@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -oue pipefail
+set -euo pipefail
 
 # Define the target directory
 TARGET_DIR="/etc/bazaar"

@@ -9,6 +9,7 @@ modules:
   - type: script
     scripts:
       - clean-bazaar.sh
+      - set-theme.sh
 
   - type: os-release
     properties:
@@ -51,6 +52,9 @@ modules:
         # "firefox" is the main package, "firefox-langpacks" is a dependency
         - firefox
         - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+        - aurora-kde-theme
+        - aurora-backgrounds
+
 
   - type: default-flatpaks
     configurations:
