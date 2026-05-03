@@ -14,13 +14,6 @@ image-version: latest # latest is also supported if you want new updates ASAP
 modules:
   - from-file: common/defaults.yml
 
-  - type: dnf
-    repos:
-      files:
-        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
-    install:
-      packages:
-        - zed
 
   - type: os-release
     properties:
