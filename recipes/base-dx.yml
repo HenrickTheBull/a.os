@@ -21,6 +21,14 @@ modules:
       IMAGE_ID: a.os-dx
       VARIANT: "a.OS Plasma DX"
 
+  - type: dnf
+    repos:
+      copr:
+        - name: nielsenb/android-udev-rules
+          chroot: fedora-44-x86_64
+    install:
+      packages:
+        - android-udev-rules
 
 
 
