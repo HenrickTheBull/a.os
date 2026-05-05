@@ -37,6 +37,8 @@ modules:
 
   - type: dnf
     repos:
+      files: 
+        - https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
       copr:
         - name: atim/starship
           chroot: fedora-43-x86_64
@@ -46,6 +48,7 @@ modules:
         - starship
         - waypipe
         - zsh
+        - brave-browser
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
