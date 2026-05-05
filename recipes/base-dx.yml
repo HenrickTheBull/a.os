@@ -21,11 +21,6 @@ modules:
       IMAGE_ID: a.os-dx
       VARIANT: "a.OS Plasma DX"
 
-  - type: dnf
-    install:
-      packages:
-        - android-udev-rules
-        - android-tools
 
 
 
