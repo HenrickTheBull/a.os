@@ -46,6 +46,7 @@ modules:
         - starship
         - waypipe
         - zsh
+        - liberation-fonts-all-1:2.1.5-15.fc44.noarch
     remove:
       packages:
         - firefox
