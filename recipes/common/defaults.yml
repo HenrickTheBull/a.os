@@ -37,8 +37,6 @@ modules:
 
   - type: dnf
     repos:
-      files: 
-        - https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
       copr:
         - name: atim/starship
           chroot: fedora-43-x86_64
@@ -48,11 +46,8 @@ modules:
         - starship
         - waypipe
         - zsh
-        - brave-browser
     remove:
       packages:
-        # example: removing firefox (in favor of the flatpak)
-        # "firefox" is the main package, "firefox-langpacks" is a dependency
         - firefox
         - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
         - aurora-kde-theme
@@ -67,6 +62,4 @@ modules:
         install: # system flatpaks we want all users to have and not remove
           - com.vivaldi.Vivaldi
           - com.discordapp.Discord
-        remove:
-          - org.mozilla.firefox
       - scope: user # Also add Flathub user repo, but no user packages
