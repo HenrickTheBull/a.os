@@ -63,4 +63,5 @@ modules:
         install: # system flatpaks we want all users to have and not remove
           - com.vivaldi.Vivaldi
           - com.discordapp.Discord
+          - org.mozilla.firefox
       - scope: user # Also add Flathub user repo, but no user packages
