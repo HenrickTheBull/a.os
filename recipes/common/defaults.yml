@@ -48,13 +48,14 @@ modules:
         - zsh
         - liberation-fonts-all-1:2.1.5-15.fc44.noarch
         - kvantum
+        - plasma-bigscreen
+        - plasma-bigscreen-wayland
     remove:
       packages:
         - firefox
         - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
         - aurora-kde-theme
         - aurora-backgrounds
-
 
   - type: default-flatpaks
     configurations:
